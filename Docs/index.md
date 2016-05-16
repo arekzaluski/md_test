@@ -5,16 +5,14 @@ The AnalogOut Interface is used to set the voltage of an analog output pin. The 
 
 ## API
 
-[![View code](https://www.mbed.com/embed/?url=https://github.com/ARMmbed/example-mbedos-blinky)](https://github.com/ARMmbed/example-mbedos-blinky/blob/master/source/blinky.cpp)    
+[![View code](https://developer.mbed.org/users/mbed_official/code/USBDevice/)](https://developer.mbed.org/users/mbed_official/code/USBDevice/docs/6d85e04fb59f/classUSBSerial.html)    
 
 
 * * *
 
 ## Hello World!
 
-[![View code](https://www.mbed.com/embed/?url=https://github.com/ARMmbed/example-mbedos-blinky)](https://github.com/ARMmbed/example-mbedos-blinky/blob/master/source/blinky.cpp)   
-
-
+  
 * * *
 
 ## Example
