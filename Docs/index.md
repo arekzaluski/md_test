@@ -9,6 +9,8 @@ The AnalogOut Interface is used to set the voltage of an analog output pin. The 
 
 
 * * *
+[![View code](https://www.mbed.com/embed/?url=https://developer.mbed.org/users/mbed_official/code/USBDevice)](https://developer.mbed.org/users/mbed_official/code/USBDevice/file/01321bd6ff89/USBDevice/USBDevice.cpp)
+
 
 ## Hello World!
 
