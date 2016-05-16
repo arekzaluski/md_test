@@ -3,4 +3,4 @@ site_name: Code inclusion test
 docs_dir: Docs
 
 pages:
-    - ['AnalogOut.md', 'Testing the docs']
+    - ['index.md', 'Testing the docs']
