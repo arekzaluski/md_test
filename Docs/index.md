@@ -5,7 +5,7 @@ The AnalogOut Interface is used to set the voltage of an analog output pin. The 
 
 ## API
 
-[![View code](https://developer.mbed.org/users/mbed_official/code/USBDevice/)](https://developer.mbed.org/users/mbed_official/code/USBDevice/docs/6d85e04fb59f/classUSBSerial.html)    
+[![View code](https://www.mbed.com/embed/?type=library)](https://developer.mbed.org/users/mbed_official/code/USBDevice/docs/6d85e04fb59f/classUSBSerial.html)    
 
 
 * * *
