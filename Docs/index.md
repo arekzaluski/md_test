@@ -9,11 +9,11 @@ The USB Host connector should be attached to
 
 ## Hello World
 
-[![View code](<https://www.mbed.com/embed/?url=https://developer.mbed.org/users/samux/code/USBHostMSD_HelloWorld/)](https://developer.mbed.org/users/samux/code/USBHostMSD_HelloWorld/file/tip/main.cpp>)
+[![View code](https://www.mbed.com/embed/?url=https://developer.mbed.org/users/samux/code/USBHostMSD_HelloWorld/)](https://developer.mbed.org/users/samux/code/USBHostMSD_HelloWorld/file/tip/main.cpp)
 
 ## API
 
-[![View code](<https://www.mbed.com/embed/?url=https://developer.mbed.org/users/mbed_official/code/USBHost/)](https://developer.mbed.org/users/mbed_official/code/USBHost/file/tip/main.cpp>) <div class="alert-box warning" title="Troobleshooting"> If your mbed board is automatically resetted when you plug a USB device, you should consider to use an external power supply </div>
+[![View code](https://www.mbed.com/embed/?url=https://developer.mbed.org/users/mbed_official/code/USBHost/)](https://developer.mbed.org/users/mbed_official/code/USBHost/file/tip/main.cpp) <div class="alert-box warning" title="Troobleshooting"> If your mbed board is automatically resetted when you plug a USB device, you should consider to use an external power supply </div>
 
 ## Related
 
