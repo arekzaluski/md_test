@@ -1,39 +1,37 @@
-CAN or Controller-area Network is a bus standard designed to allow microcontrollers and devices to communicate with each other without a host computer.
+The DigitalIn interface is used to read the value of a digital input pin.
+
+Any of the numbered mbed pins can be used as a DigitalIn. 
 
 ## Hello World!
 
-This example sends from one CAN bus (can1) an counter while it is listen on the other CAN bus (can2) to receive a packet. Each bus controller should be connected to a CAN bus transceiver. These should be connected together at a CAN bus.
-
-In order to use CAN, you need transceivers, which change the digital signal (RD/TD), outputted by the LPC1768 into a differential signal, which is transmitted along the CAN bus to the other nodes. As well as this, you need two 120 Ohm terminating resistors at either end of the bus. Without both the transceivers and the terminating resistors, the bus will not work properly. Below is an example circuit, which demonstrates how to set up a CAN bus, which simply loops the data between the mbed LPC1768's two CAN buses.
-
-![https://developer.mbed.org/media/uploads/melse/canexample.png](https://developer.mbed.org/media/uploads/melse/canexample.png)
-
-<div class="alert-box info"> If using the LPC1768, or the LPC11C1X series, the transceivers are not included on the chip, so the two transceivers are required. However, if you are using the LPC11C2X series, you do not need transceivers, as they are already present on the chip. In both cases, you need terminating resistors. </div> <div class="alert-box warning"> The mbed's pins are 5V tolerant, so this example will work. However, do not assume that the chip you are using has 5V tolerant pins, so consult with the user manual/datasheet of your device to check this. If it is not 5V tolerant, a logic level converter can be used, to lower the logic levels to 3.3V logic. </div>
-
-  1. include "mbed.h"
-
-Ticker ticker; DigitalOut led1(LED1); DigitalOut led2(LED2); CAN can1(p9, p10); CAN can2(p30, p29); char counter = 0;
-
-void send() { printf("send()\n"); if(can1.write(CANMessage(1337, &amp;counter;, 1))) { printf("wloop()\n"); counter++; printf("Message sent: %d\n", counter); } led1 = !led1; }
-
-int main() { printf("main()\n"); ticker.attach(&amp;send;, 1); CANMessage msg; while(1) { printf("loop()\n"); if(can2.read(msg)) { printf("Message received: %d\n", msg.data[0]); led2 = !led2; } wait(0.2); } }
+[![View code](<https://www.mbed.com/embed/?type=program)](https://developer.mbed.org/users/mbed_official/code/DigitalIn_HelloWorld_Mbed/docs/tip/main_8cpp_source.html>) [![View code](<https://www.mbed.com/embed/?type=program)](https://developer.mbed.org/users/mbed_official/code/DigitalIn_HelloWorld_FRDM-KL25Z/docs/tip/main_8cpp_source.html>)
 
 ## API
 
 API summary
 
-[![View code](<https://www.mbed.com/embed/?type=library)](https://developer.mbed.org/users/mbed_official/code/mbed/docs/tip/classmbed_1_1CAN.html>)
+[![View code](<https://www.mbed.com/embed/?type=library)](https://developer.mbed.org/users/mbed_official/code/mbed/docs/tip/classmbed_1_1DigitalIn.html>)
 
-## Details
+## Interface
 
-The CAN Interface can be used on mbed pins p9/p10 and p30/p29
+The DigitalIn Interface can be used on any pin with a blue label.
 
-[![https://developer.mbed.org/media/img/boardlogos/lpc1768/pinout.png](https://developer.mbed.org/media/img/boardlogos/lpc1768/pinout.png)](/handbook/Pinouts)  
+The pin input is logic '0' for any voltage on the pin below 0.8v, and '1' for any voltage above 2.0v. By default, the DigitalIn is setup with an internal pull-down resistor.
+
+[![https://developer.mbed.org/media/uploads/chris/pinout-thumbnails.jpg](https://developer.mbed.org/media/uploads/chris/pinout-thumbnails.jpg)](/handbook/Pinouts)  
 ---  
 [See the Pinout page for more details](/handbook/Pinouts)  
   
-The CAN Interface can be used to write data words out of a CAN port and will return the data received from another CAN device. The CAN clock frequency can be configured.
+## Related
 
-## Resources
+To handle an interrupt, see [InterruptIn](InterruptIn)
 
-  * [Wikipedia](http://en.wikipedia.org/wiki/Controllerarea_network)
+Examples of logical functions
+
+  1. include "mbed.h"
+
+DigitalIn a(p5); DigitalIn b(p6); DigitalOut z_not(LED1); DigitalOut z_and(LED2); DigitalOut z_or(LED3); DigitalOut z_xor(LED4);
+
+int main() { while(1) { z_not = !a; z_and = a &amp;&amp; b; z_or = a || b; z_xor = a ^ b; } }
+
+```
