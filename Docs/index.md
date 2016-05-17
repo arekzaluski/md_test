@@ -5,7 +5,7 @@ The USBHostMSD interface is used to access a USB mass storage device.
 The USB Host connector should be attached to 
 
   * **p31 (D+), p32 (D-) and GND** for the **LPC1768**
-  * add **two 15k resistors tied to GND on D+ and D-**
+  * add **two 15k resistors tied to GND on D+ and D-**i
 
 ## Hello World
 
@@ -13,7 +13,9 @@ The USB Host connector should be attached to
 
 ## API
 
-[![View code](https://www.mbed.com/embed/?url=https://developer.mbed.org/users/mbed_official/code/USBHost/)](https://developer.mbed.org/users/mbed_official/code/USBHost/file/tip/main.cpp) <div class="alert-box warning" title="Troobleshooting"> If your mbed board is automatically resetted when you plug a USB device, you should consider to use an external power supply </div>
+[![View code](https://www.mbed.com/embed/?url=https://developer.mbed.org/users/mbed_official/code/USBHost/)](https://developer.mbed.org/users/mbed_official/code/USBHost/file/tip/main.cpp) 
+
+<div class="alert-box warning" title="Troobleshooting"> If your mbed board is automatically resetted when you plug a USB device, you should consider to use an external power supply </div>
 
 ## Related
 
