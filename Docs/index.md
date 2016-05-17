@@ -4,7 +4,7 @@ Any of the numbered mbed pins can be used as a DigitalIn.
 
 ## Hello World!
 
-[![View code](https://www.mbed.com/embed/?url=https://developer.mbed.org/users/samux/code/USBMouseKeyboard_HelloWorld)](https://developer.mbed.org/users/samux/code/USBMouseKeyboard_HelloWorld/file/09cebc93f3a7/main.cpp>) [![View code](<https://www.mbed.com/embed/?type=program)](https://developer.mbed.org/users/mbed_official/code/DigitalIn_HelloWorld_FRDM-KL25Z/docs/tip/main_8cpp_source.html>)
+[![View code](https://www.mbed.com/embed/?url=https://developer.mbed.org/users/samux/code/USBMouseKeyboard_HelloWorld)](https://developer.mbed.org/users/samux/code/USBMouseKeyboard_HelloWorld/file/09cebc93f3a7/main.cpp) [![View code](<https://www.mbed.com/embed/?type=program)](https://developer.mbed.org/users/mbed_official/code/DigitalIn_HelloWorld_FRDM-KL25Z/docs/tip/main_8cpp_source.html>)
 
 ## API
 
