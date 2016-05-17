@@ -28,6 +28,8 @@ To handle an interrupt, see [InterruptIn](InterruptIn)
 
 Examples of logical functions
 
+```
+
   1. include "mbed.h"
 
 DigitalIn a(p5); DigitalIn b(p6); DigitalOut z_not(LED1); DigitalOut z_and(LED2); DigitalOut z_or(LED3); DigitalOut z_xor(LED4);
