@@ -30,7 +30,7 @@ To handle an interrupt, see [InterruptIn](InterruptIn)
 
 Examples of logical functions
 
-```
+```C++
 
   1. include "mbed.h"
 
