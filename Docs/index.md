@@ -1,25 +1,47 @@
-The USBHostMSD interface is used to access a USB mass storage device.
+The DigitalIn interface is used to read the value of a digital input pin.
 
-<div class="alert-box warning" title="Library in Beta!"> This library is in Beta. If you have any problems using the USBHost library, please send a bug report at [support@mbed.org](support@mbed.org) </div>
+Any of the numbered mbed pins can be used as a DigitalIn. 
 
-The USB Host connector should be attached to 
+## Hello World!
 
-  * **p31 (D+), p32 (D-) and GND** for the **LPC1768**
-  * add **two 15k resistors tied to GND on D+ and D-**i
+[![View code](https://www.mbed.com/embed/?url=https://developer.mbed.org/users/mbed_official/code/DigitalIn_HelloWorld_Mbed/)](https://developer.mbed.org/users/mbed_official/code/DigitalIn_HelloWorld_Mbed/file/tip/main.cpp) 
 
-## Hello World
-
-[![View code](https://www.mbed.com/embed/?url=https://developer.mbed.org/users/samux/code/USBHostMSD_HelloWorld/)](https://developer.mbed.org/users/samux/code/USBHostMSD_HelloWorld/file/tip/main.cpp)
+[![View code](https://www.mbed.com/embed/?url=https://developer.mbed.org/users/mbed_official/code/DigitalIn_HelloWorld_FRDM-KL25Z/)](https://developer.mbed.org/users/mbed_official/code/DigitalIn_HelloWorld_FRDM-KL25Z/file/tip/main.cpp) 
 
 ## API
 
-[![View code](https://www.mbed.com/embed/?url=https://developer.mbed.org/users/mbed_official/code/USBHost/)](https://developer.mbed.org/users/mbed_official/code/USBHost/file/tip/main.cpp) 
+API summary
 
-<div class="alert-box warning" title="Troobleshooting"> If your mbed board is automatically resetted when you plug a USB device, you should consider to use an external power supply </div>
+[![View code](https://www.mbed.com/embed/?type=library)](https://developer.mbed.org/users/mbed_official/code/mbed/docs/tip/classmbed_1_1DigitalIn.html) 
+
+## Interface
+
+The DigitalIn Interface can be used on any pin with a blue label.
+
+The pin input is logic '0' for any voltage on the pin below 0.8v, and '1' for any voltage above 2.0v. By default, the DigitalIn is setup with an internal pull-down resistor.
+
+[![/media/uploads/chris/pinout-thumbnails.jpg](https://developer.mbed.org/media/uploads/chris/pinout-thumbnails.jpg)](https://developer.mbed.org/handbook/Pinouts)  
+---  
+[See the Pinout page for more details](https://developer.mbed.org/handbook/Pinouts)  
+  
+## Related
+
+To handle an interrupt, see [InterruptIn](InterruptIn)
+
+Examples of logical functions
+
+```
+
+  1. include "mbed.h"
+
+DigitalIn a(p5); DigitalIn b(p6); DigitalOut z_not(LED1); DigitalOut z_and(LED2); DigitalOut z_or(LED3); DigitalOut z_xor(LED4);
+
+int main() { while(1) { z_not = !a; z_and = a &amp;&amp; b; z_or = a || b; z_xor = a ^ b; } }
+
+```
 
 ## Related
 
-  * [USBHostMouse](USBHostMouse)
-  * [USBHostKeyboard](USBHostKeyboard)
-  * [USBHostSerial](USBHostSerial)
-  * [USBHostHub](USBHostHub)
+To handle an interrupt, see [InterruptIn](InterruptIn)
+
+Examples of logical functions
